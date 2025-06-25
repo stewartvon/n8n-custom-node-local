@@ -1,0 +1,23 @@
+{
+    "name": "n8n-v1-ibmdb2-node",
+    "version": "1.0.0",
+    "main": "nodes/IBMDB2.node.ts",
+    "license": "MIT",
+    "scripts": {
+        "setup": "node setup-local.js",
+        "start": "n8n start",
+        "dev": "n8n start --tunnel",
+        "build": "n8n-node-dev build",
+        "install:custom": "npm install && n8n-node-dev build"
+    },
+    "dependencies": {
+        "ibm_db": "^3.1.0",
+        "n8n": "^1.28.0",
+        "n8n-workflow": "^1.28.0"
+    },
+    "devDependencies": {
+        "@types/node": "^18.0.0",
+        "typescript": "^4.9.0",
+        "n8n-node-dev": "^1.0.0"
+    }
+}

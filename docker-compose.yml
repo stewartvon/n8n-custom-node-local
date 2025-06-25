@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  n8n:
+    image: n8nio/n8n:1
+    build: .
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_HOST=0.0.0.0
+      - GENERIC_TIMEZONE=Europe/Berlin
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=admin
+      - N8N_BASIC_AUTH_PASSWORD=password
+      - NODE_FUNCTION_ALLOW_EXTERNAL=ibm_db
+      - N8N_CUSTOM_EXTENSIONS=/home/node/custom-nodes
+    volumes:
+      - ./n8n-data:/home/node/.n8n
+      - ./nodes:/home/node/custom-nodes/n8n-nodes-ibmdb2

@@ -1,0 +1,21 @@
+{
+    "name": "IBM DB2 test workflow",
+    "nodes": [
+      {
+        "parameters": {
+          "host": "your-db2-host",
+          "port": 50000,
+          "database": "BLUDB",
+          "user": "dbuser",
+          "password": "yourpassword",
+          "sql": "SELECT CURRENT DATE FROM SYSIBM.SYSDUMMY1"
+        },
+        "name": "IBM DB2",
+        "type": "ibmdb2",
+        "typeVersion": 1,
+        "position": [250, 300]
+      }
+    ],
+    "connections": {}
+  }
+  
